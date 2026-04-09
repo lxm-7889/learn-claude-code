@@ -18,6 +18,13 @@ so later chapters can grow from the same structure.
 import os
 import subprocess
 from dataclasses import dataclass
+import sys
+import io
+
+# 强制使用 UTF-8 编码
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8')
+
 
 try:
     import readline
